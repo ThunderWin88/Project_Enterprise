@@ -1,5 +1,7 @@
 package com.example.restservice.Models;
 
+import java.sql.Date;
+
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -13,58 +15,79 @@ public class User {
     @GeneratedValue
     private long BookingID;
 
-    @Column
-    private String Name;
+   @Column
+   private String Name;
 
-    @Column
-    private String Lastname;
+   @Column
+   private String Email;
 
-    @Column
-    private int Guests;
+   @Column
+   private String Roomtype;
 
-    @Column
-    private int Roomnum;
+   @Column
+   private int Roomnum;
 
-    public long getBookingID() {
-        return BookingID;
-    }
+   @Column
+   private int guests;
 
-    public String getName() {
-        return Name;
-    }
+   @Column
+   private Date date;
 
-    public String getLastname() {
-        return Lastname;
-    }
+public long getBookingID() {
+    return BookingID;
+}
 
-    public int getGuests() {
-        return Guests;
-    }
+public String getName() {
+    return Name;
+}
 
-    public int getRoomnum() {
-        return Roomnum;
-    }
+public String getEmail() {
+    return Email;
+}
 
-    public void setBookingID(long bookingID) {
-        BookingID = bookingID;
-    }
+public String getRoomtype() {
+    return Roomtype;
+}
 
-    public void setName(String name) {
-        Name = name;
-    }
+public int getRoomnum() {
+    return Roomnum;
+}
 
-    public void setLastname(String lastname) {
-        Lastname = lastname;
-    }
+public int getGuests() {
+    return guests;
+}
 
-    public void setGuests(int guests) {
-        Guests = guests;
-    }
+public Date getDate() {
+    return date;
+}
 
-    public void setRoomnum(int roomnum) {
-        Roomnum = roomnum;
-    }
+public void setBookingID(long bookingID) {
+    BookingID = bookingID;
+}
 
+public void setName(String name) {
+    Name = name;
+}
+
+public void setEmail(String email) {
+    Email = email;
+}
+
+public void setRoomtype(String roomtype) {
+    Roomtype = roomtype;
+}
+
+public void setRoomnum(int roomnum) {
+    Roomnum = roomnum;
+}
+
+public void setGuests(int guests) {
+    this.guests = guests;
+}
+
+public void setDate(Date date) {
+    this.date = date;
+}
     
     
     

@@ -1,5 +1,6 @@
 package com.example.restservice.Contoller;
 
+import java.sql.Date;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -41,9 +42,11 @@ public class ApiControllers {
     public String updateUser(@PathVariable long id, @RequestBody User user){
         User updateUser = userRepo.findById(id).get();
         updateUser.setName(user.getName());
-        updateUser.setLastname(user.getLastname());
+        updateUser.setEmail(user.getEmail());
+        updateUser.setRoomtype(user.getRoomtype());
         updateUser.setRoomnum(user.getRoomnum());
         updateUser.setGuests(user.getGuests());
+        updateUser.setDate(user.getDate());
         userRepo.save(updateUser);
         return "Updating . . .";
 
